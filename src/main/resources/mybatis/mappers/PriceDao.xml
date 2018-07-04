@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.PriceDao">
+    <insert id="addPrice" parameterType="Price">
+        INSERT INTO `chongdianzhuang`.`price` (`number`, `shijianduan1`, `price1`, `shijianduan2`, `price2`, `shijianduan3`, `price3`, `shijianduan4`, `price4`)
+        VALUES (#{number}, #{shijianduan1}, #{price1}, #{shijianduan2}, #{price2}, #{shijianduan3}, #{price3}, #{shijianduan4}, #{price4});
+    </insert>
+
+    <select id="findPrice" resultType="Price">
+        SELECT * FROM price WHERE number=#{number}
+    </select>
+
+    <update id="updatePrice" parameterType="Price">
+        UPDATE `chongdianzhuang`.`price` SET  `shijianduan1`=#{shijianduan1}, `price1`=#{price1}, `shijianduan2`=#{shijianduan2}, `price2`=#{price2}, `shijianduan3`=#{shijianduan3},
+        `price3`=#{price3}, `shijianduan4`=#{shijianduan4}, `price4`=#{price4} WHERE number=#{number};
+    </update>
+
+    <select id="findPriceByNumber" resultType="Price">
+        SELECT * FROM price WHERE number = #{number}
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.Baowen304Dao">
+    <insert id="addBaowen304" useGeneratedKeys="true" keyProperty="id" parameterType="Baowen304">
+        INSERT INTO `baowen304` (`baowenId`, `yuliu1`, `yuliu2`, `number`, `gongzuozhuangtai`, `chelianjiezhuangtai`,
+        `brmcheliangbianshibaowen`, `vbubaowen`, `bcpdonglixudianchichongdiancanshu`, `brodianchichongdianzhunbeijiuxuzhuangtai`, `bcldianchichongdianxuqiu`,
+         `bcsdianchichongdianzongzhuangtai`, `bsmdonglixudianchizhuangtaixinxi`, `bstzhongzhichongdian`, `bsdbmstongjishuju`, `bembaowen`, `create_date`) 
+         VALUES (#{baowenId}, #{yuliu1}, #{yuliu2}, #{number}, #{gongzuozhuangtai}, #{chelianjiezhuangtai},
+          #{brmcheliangbianshibaowen}, #{vbubaowen}, #{bcpdonglixudianchichongdiancanshu}, #{brodianchichongdianzhunbeijiuxuzhuangtai}, #{bcldianchichongdianxuqiu},
+          #{bcsdianchichongdianzongzhuangtai}, #{bsmdonglixudianchizhuangtaixinxi}, #{bstzhongzhichongdian}, #{bsdbmstongjishuju}, #{bembaowen}, now())
+    </insert>
+</mapper>

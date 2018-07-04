@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.Baowen6Dao">
+    <insert id="addBaowen6" useGeneratedKeys="true" keyProperty="id" parameterType="Baowen6">
+        INSERT INTO `chongdianzhuang`.`baowen6` (`baowenid`, `yuliu1`, `yuliu2`, `chongdianzhuangbiaoma`, `chongdianqiangkou`,
+        `minglingqishibiaozhi`, `minglinggeshu`, `minglingzhixingjieguo`, `create_date`)
+        VALUES (#{baowenid}, #{yuliu1}, #{yuliu2}, #{chongdianzhuangbiaoma}, #{chongdianqiangkou},
+        #{minglingqishibiaozhi}, #{minglinggeshu}, #{minglingzhixingjieguo}, now())
+    </insert>
+</mapper>

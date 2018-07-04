@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.Baowen104Dao">
+    <insert id="addBaowen104" useGeneratedKeys="true" keyProperty="id" parameterType="Baowen104">
+        INSERT INTO `baowen104` (`baowenId`, `yuliu1`, `yuliu2`, `number`, `chongdianqiangshuliang`, `chongdiankouhao`,
+        `chongdianqiangleixing`, `gongzuozhuangtai`, `dangqianSOC`, `gaojingzhuangtai`, `chelianjiezhuangtai`, `beicichongdianfeiyong`, `neibubianliang2`,
+        `neibubianliang3`, `zhiliuchongdiandianya`, `zhiliuchongdiandianliu`, `bmsxuqiudianya`, `bmsxuqiudianliu`, `bmschongdianmoshi`, `jiaoliuAdianya`,
+        `jiaoliuBdianya`, `jiaoliuCdianya`, `jiaoliuAdianliu`, `jiaoliuBdianliu`, `jiaoliuCdianliu`, `chengyuchongdianshijian`, `chongdianshichang`,
+        `beicichongdianleijichongdiandianliang`, `chongdianqiandianbiaodushu`, `dangqiandianbiaodushu`, `chongdianqidongfangshi`, `chongdiancelue`,
+        `chongdianceluecanshu`, `yuyuebiaozhi`, `chongdiankahao`, `yuyuechaoshishijian`, `yuyuekaishichongdianshijian`, `chongdianqiankayue`, `yuliu`,
+        `chongdiangonglv`, `xitongbianliang3`, `xitongbianliang4`, `xitongbianliang5`, `create_date`)
+        VALUES (#{baowenId}, #{yuliu1}, #{yuliu2}, #{number}, #{chongdianqiangshuliang}, #{chongdiankouhao},
+         #{chongdianqiangleixing}, #{gongzuozhuangtai}, #{dangqianSOC}, #{gaojingzhuangtai}, #{chelianjiezhuangtai}, #{beicichongdianfeiyong}, #{neibubianliang2},
+          #{neibubianliang3}, #{zhiliuchongdiandianya}, #{zhiliuchongdiandianliu}, #{bmsxuqiudianya}, #{bmsxuqiudianliu}, #{bmschongdianmoshi}, #{jiaoliuAdianya},
+          #{jiaoliuBdianya}, #{jiaoliuCdianya}, #{jiaoliuAdianliu}, #{jiaoliuBdianliu}, #{jiaoliuCdianliu}, #{chengyuchongdianshijian}, #{chongdianshichang},
+           #{beicichongdianleijichongdiandianliang}, #{chongdianqiandianbiaodushu}, #{dangqiandianbiaodushu}, #{chongdianqidongfangshi}, #{chongdiancelue},
+           #{chongdianceluecanshu}, #{yuyuebiaozhi}, #{chongdiankahao}, #{yuyuechaoshishijian}, #{yuyuekaishichongdianshijian}, #{chongdianqiankayue}, #{yuliu},
+            #{chongdiangonglv}, #{xitongbianliang3}, #{xitongbianliang4}, #{xitongbianliang5}, now())
+    </insert>
+
+
+    <select id="findBaowen104" resultType="Baowen104">
+        SELECT * FROM baowen104 WHERE number=#{number} ORDER BY id DESC LIMIT 0,5
+    </select>
+</mapper>

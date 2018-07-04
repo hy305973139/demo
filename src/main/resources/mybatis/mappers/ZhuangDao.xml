@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.ZhuangDao">
+    <insert id="addZhuang" parameterType="Zhuang">
+        INSERT INTO `chongdianzhuang`.`zhuang` (`ip`, `number`, `status`, `userid`) VALUES (#{ip},#{number},0,#{userid});
+    </insert>
+
+    <update id="updateZhuang" parameterType="Zhuang">
+        UPDATE `chongdianzhuang`.`zhuang` SET `status`=#{status}, `userid`=#{userid} WHERE `number`=#{number};
+    </update>
+
+    <select id="findZhuang" resultType="Zhuang">
+        SELECT * FROM zhuang WHERE number=#{number}
+    </select>
+
+    <select id="findZhuangByIp" resultType="Zhuang">
+        SELECT * FROM zhuang WHERE  ip= #{ip}
+    </select>
+</mapper>

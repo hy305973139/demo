@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserDao">
+    <insert id="addUser" useGeneratedKeys="true" keyProperty="id" parameterType="User">
+        INSERT INTO `chongdianzhuang`.`user` (`id`, `kahao`, `balance`,`powernumber`) VALUES (#{id},#{kahao}, #{balance},#{powernumber});
+    </insert>
+    
+    <select id="findUserById" resultType="User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="findUserByKahao" resultType="User">
+        SELECT * FROM user WHERE kahao = #{kahao}
+    </select>
+    
+    <update id="updateUser" parameterType="User">
+        UPDATE user SET balance=balance+#{balance} ,powernumber=powernumber+#{powernumber} WHERE id = #{id}
+    </update>
+</mapper>

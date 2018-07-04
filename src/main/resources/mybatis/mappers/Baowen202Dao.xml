@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.Baowen202Dao">
+    <insert id="add" useGeneratedKeys="true" keyProperty="id" parameterType="Baowen202">
+      INSERT INTO `baowen202` (`baowenId`, `yuliu1`, `yuliu2`, `number`, `chongdianqiangweizhileixing`, `chongdianqiangkou`, `chongdiankahao`, `chongdiankaishishijian`,
+      `chongdianjieshushijian`, `chongdianshijianchangdu`, `kaishiSOC`, `jieshuSOC`, `chongdianjieshuyuanyin`, `bencichongdiandianliang`,
+      `chongdianqiandianbiaodushu`, `chongdianhoudianbiaodushu`, `beicichongdianjine`, `beiyong`, `chongdianqiankayue`, `dangqianchongdianjilusuoyin`,
+      `zongchongdianjilutiaomu`, `yuliu`, `chongdiancelue`, `chongdianceluecanshu`, `cheliangVIN`, `chepaihao`, `shiduan1`, `shiduan2`, `shiduan3`, `shiduan4`,
+      `shiduan5`, `shiduan6`, `shiduan7`, `shiduan8`, `shiduan9`, `shiduan10`, `shiduan11`, `shiduan12`, `shiduan13`, `shiduan14`, `shiduan15`, `shiduan16`,
+      `shiduan17`, `shiduan18`, `shiduan19`, `shiduan20`, `shiduan21`, `shiduan22`, `shiduan23`, `shiduan24`, `shiduan25`, `shiduan26`, `shiduan27`,
+      `shiduan28`, `shiduan29`, `shiduan30`, `shiduan31`, `shiduan32`, `shiduan33`, `shiduan34`, `shiduan35`, `shiduan36`, `shiduan37`, `shiduan38`,
+      `shiduan39`, `shiduan40`, `shiduan41`, `shiduan42`, `shiduan43`, `shiduan44`, `shiduan45`, `shiduan46`, `shiduan47`, `shiduan48`, `qidongfangshi`,`create_date`)
+      VALUES (#{baowenId}, #{yuliu1}, #{yuliu2}, #{number}, #{chongdianqiangweizhileixing}, #{chongdianqiangkou}, #{chongdiankahao}, #{chongdiankaishishijian},
+      #{chongdianjieshushijian}, #{chongdianshijianchangdu}, #{kaishiSOC}, #{jieshuSOC}, #{chongdianjieshuyuanyin}, #{bencichongdiandianliang},
+      #{chongdianqiandianbiaodushu}, #{chongdianhoudianbiaodushu}, #{beicichongdianjine}, #{beiyong}, #{chongdianqiankayue}, #{dangqianchongdianjilusuoyin},
+      #{zongchongdianjilutiaomu}, #{yuliu}, #{chongdiancelue}, #{chongdianceluecanshu}, #{cheliangVIN}, #{chepaihao}, #{shiduan1}, #{shiduan2}, #{shiduan3}, #{shiduan4},
+      #{shiduan5}, #{shiduan6}, #{shiduan7}, #{shiduan8}, #{shiduan9}, #{shiduan10}, #{shiduan11}, #{shiduan12}, #{shiduan13}, #{shiduan14}, #{shiduan15}, #{shiduan16},
+      #{shiduan17}, #{shiduan18}, #{shiduan19}, #{shiduan20}, #{shiduan21}, #{shiduan22}, #{shiduan23}, #{shiduan24}, #{shiduan25}, #{shiduan26}, #{shiduan27},
+      #{shiduan28}, #{shiduan29}, #{shiduan30}, #{shiduan31}, #{shiduan32}, #{shiduan33}, #{shiduan34}, #{shiduan35}, #{shiduan36}, #{shiduan37}, #{shiduan38},
+      #{shiduan39}, #{shiduan40}, #{shiduan41}, #{shiduan42}, #{shiduan43}, #{shiduan44}, #{shiduan45}, #{shiduan46}, #{shiduan47}, #{shiduan48}, #{qidongfangshi},
+      now())
+    </insert>
+  
+  
+  <select id="findBaowen202byKaishi" resultType="Baowen202">
+    SELECT * FROM baowen202 WHERE chongdiankahao=#{chongdiankahao} AND chongdiankaishishijian=#{chongdiankaishishijian} AND chongdianjieshushijian=#{chongdianjieshushijian}
+   </select>
+</mapper>
